@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import download from 'downloadjs'
 
-class ReactFileDownload extends React.Component {
+class RcDownload extends React.Component {
   static propTypes = {
     children: PropTypes.any,
-    url: PropTypes.string,
+    url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     responseType: PropTypes.string,
     headers: PropTypes.object,
     fileName: PropTypes.string,
@@ -35,7 +35,7 @@ class ReactFileDownload extends React.Component {
     this._fireOriginalClick(e)
 
     axios({
-      url,
+      url: isString(url) ? url : url(),
       method: 'GET',
       responseType: 'blob'
     }).then(response => {
@@ -53,7 +53,7 @@ class ReactFileDownload extends React.Component {
   }
 }
 
-export default ReactFileDownload
+export default RcDownload
 
 function getFileName(url) {
   if (!url) {
@@ -65,4 +65,8 @@ function getFileName(url) {
     return ''
   }
   return lastPiece.split('?')[0] || ''
+}
+
+function isString(url) {
+  return Object.prototype.toString.call(url) === '[object String]'
 }
