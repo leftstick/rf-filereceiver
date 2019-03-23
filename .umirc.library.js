@@ -8,8 +8,8 @@ export default {
     src: './docs',
     hashRouter: true,
     themeConfig: { mode: 'light' },
-    base: '/rf-download',
-    title: 'rf-download',
+    base: '/rf-filereceiver',
+    title: 'rf-filereceiver',
     description: 'A component which interacts with user click, and download file via downloadjs',
     plugins: [splash()]
   }

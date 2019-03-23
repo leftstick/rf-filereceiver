@@ -4,9 +4,9 @@ route: /
 ---
 
 import { Playground, PropsTable } from 'docz'
-import RfDownload from '../src/'
+import RfReceiver from '../src/'
 
-## Why rf-download
+## Why rf-filereceiver
 
 You might have requirement to download something programmatically.
 
@@ -17,28 +17,28 @@ You might have requirement to download something programmatically.
 ### yarn
 
 ```bash
-yarn add rf-download
+yarn add rf-filereceiver
 ```
 
 ### npm
 
 ```bash
-npm install rf-download
+npm install rf-filereceiver
 ```
 
 ## Usage
 
 <Playground>
-  <RfDownload
-    url="https://leftstick.github.io/rf-download/public/example.txt"
+  <RfReceiver
+    url="https://leftstick.github.io/rf-filereceiver/public/example.txt"
     responseType="blob"
     fileName="test.txt"
     fileMIMEType="text/plain"
   >
     <button>Try here</button>
-  </RfDownload>
+  </RfReceiver>
 </Playground>
 
 ## Props
 
-<PropsTable of={RfDownload} />
+<PropsTable of={RfReceiver} />

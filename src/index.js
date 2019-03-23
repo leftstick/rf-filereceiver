@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import download from 'downloadjs'
 
-class RfDownload extends React.Component {
+class RfReceiver extends React.Component {
   static propTypes = {
     children: PropTypes.any,
     url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
@@ -53,7 +53,7 @@ class RfDownload extends React.Component {
   }
 }
 
-export default RfDownload
+export default RfReceiver
 
 function getFileName(url) {
   if (!url) {
