@@ -1,5 +1,5 @@
 {
-  "name": "rc-component",
+  "name": "rc-download",
   "version": "1.0.0",
   "description": "A component which interacts with user click, and download file via downloadjs",
   "scripts": {
