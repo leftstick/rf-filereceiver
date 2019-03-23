@@ -4,10 +4,9 @@
   "description": "A component which interacts with user click, and download file via downloadjs",
   "scripts": {
     "start": "umi-lib doc dev",
-    "doc": "umi-lib doc build ",
+    "doc": "umi-lib doc build && umi-lib doc deploy",
     "build": "umi-lib build",
-    "prepare": "npm run build",
-    "test": "npm run build && mocha"
+    "prepare": "npm run build"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
