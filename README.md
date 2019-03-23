@@ -1,4 +1,4 @@
-# rc-download
+# react-file-download
 
 [![NPM version][npm-image]][npm-url]
 ![][david-url]
@@ -12,13 +12,13 @@ A component which interacts with user click, and download file via downloadjs
 ### yarn
 
 ```bash
-yarn add rc-download
+yarn add react-file-download
 ```
 
 ### npm
 
 ```bash
-npm install --save rc-download
+npm install --save react-file-download
 ```
 
 ## Import
@@ -26,40 +26,40 @@ npm install --save rc-download
 ### ES2015
 
 ```javascript
-import RcDownload from 'rc-download'
+import ReactFileDownload from 'react-file-download'
 ```
 
 ### CommonJS
 
 ```javascript
-const RcDownload = require('rc-download')
+const ReactFileDownload = require('react-file-download')
 ```
 
 ## Usage
 
 ```javascript
-import RcDownload from 'rc-download'
+import ReactFileDownload from 'react-file-download'
 
 function Example() {
   return (
-    <RcDownload
-      url="https://leftstick.github.io/rc-download/public/example.txt"
+    <ReactFileDownload
+      url="https://leftstick.github.io/react-file-download/public/example.txt"
       responseType="blob"
       fileName="test.txt"
       fileMIMEType="text/plain"
     >
       <button>try me</button>
-    </RcDownload>
+    </ReactFileDownload>
   )
 }
 ```
 
 ## LICENSE
 
-[MIT License](https://raw.githubusercontent.com/leftstick/rc-download/master/LICENSE)
+[MIT License](https://raw.githubusercontent.com/leftstick/react-file-download/master/LICENSE)
 
-[npm-url]: https://npmjs.org/package/rc-download
-[npm-image]: https://badge.fury.io/js/rc-download.png
-[david-url]: https://david-dm.org/leftstick/rc-download.png
-[dt-url]: https://img.shields.io/npm/dt/rc-download.svg
-[license-url]: https://img.shields.io/npm/l/rc-download.svg
+[npm-url]: https://npmjs.org/package/react-file-download
+[npm-image]: https://badge.fury.io/js/react-file-download.png
+[david-url]: https://david-dm.org/leftstick/react-file-download.png
+[dt-url]: https://img.shields.io/npm/dt/react-file-download.svg
+[license-url]: https://img.shields.io/npm/l/react-file-download.svg

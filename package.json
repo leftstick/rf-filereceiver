@@ -1,5 +1,5 @@
 {
-  "name": "rc-download",
+  "name": "react-file-download",
   "version": "1.0.0",
   "description": "A component which interacts with user click, and download file via downloadjs",
   "scripts": {
@@ -15,7 +15,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leftstick/rc-download.git"
+    "url": "git+https://github.com/leftstick/react-file-download.git"
   },
   "files": [
     "src",
@@ -28,9 +28,9 @@
   "author": "Howard.Zuo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leftstick/rc-download/issues"
+    "url": "https://github.com/leftstick/react-file-download/issues"
   },
-  "homepage": "https://github.com/leftstick/rc-download#readme",
+  "homepage": "https://github.com/leftstick/react-file-download#readme",
   "devDependencies": {
     "@types/downloadjs": "^1.4.1",
     "@types/react": "^16.8.8",

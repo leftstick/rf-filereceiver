@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import download from 'downloadjs'
 
-class RcDownload extends React.Component {
+class ReactFileDownload extends React.Component {
   static propTypes = {
     children: PropTypes.any,
     url: PropTypes.string,
@@ -53,7 +53,7 @@ class RcDownload extends React.Component {
   }
 }
 
-export default RcDownload
+export default ReactFileDownload
 
 function getFileName(url) {
   if (!url) {

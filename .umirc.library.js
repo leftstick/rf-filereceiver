@@ -8,8 +8,8 @@ export default {
     src: './docs',
     hashRouter: true,
     themeConfig: { mode: 'light' },
-    base: '/rc-download',
-    title: 'rc-download',
+    base: '/react-file-download',
+    title: 'react-file-download',
     description: 'A component which interacts with user click, and download file via downloadjs',
     plugins: [splash()]
   }
