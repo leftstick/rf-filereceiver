@@ -1,7 +1,6 @@
 # rc-download
 
 [![NPM version][npm-image]][npm-url]
-![][travis-url]
 ![][david-url]
 ![][dt-url]
 ![][license-url]
@@ -44,7 +43,7 @@ import RcDownload from 'rc-download'
 function Example() {
   return (
     <RcDownload
-      url="http://leftstick.github.io/rc-download/public/example.txt"
+      url="https://leftstick.github.io/rc-download/public/example.txt"
       responseType="blob"
       fileName="test.txt"
       fileMIMEType="text/plain"
@@ -61,7 +60,6 @@ function Example() {
 
 [npm-url]: https://npmjs.org/package/rc-download
 [npm-image]: https://badge.fury.io/js/rc-download.png
-[travis-url]: https://api.travis-ci.com/leftstick/rc-download.svg?branch=master
 [david-url]: https://david-dm.org/leftstick/rc-download.png
 [dt-url]: https://img.shields.io/npm/dt/rc-download.svg
 [license-url]: https://img.shields.io/npm/l/rc-download.svg
