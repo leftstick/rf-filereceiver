@@ -1,4 +1,4 @@
-# react-component-download
+# react-4-download
 
 [![NPM version][npm-image]][npm-url]
 ![][david-url]
@@ -12,13 +12,13 @@ A component which interacts with user click, and download file via downloadjs
 ### yarn
 
 ```bash
-yarn add react-component-download
+yarn add react-4-download
 ```
 
 ### npm
 
 ```bash
-npm install --save react-component-download
+npm install --save react-4-download
 ```
 
 ## Import
@@ -26,40 +26,40 @@ npm install --save react-component-download
 ### ES2015
 
 ```javascript
-import RcDownload from 'react-component-download'
+import RfDownload from 'react-4-download'
 ```
 
 ### CommonJS
 
 ```javascript
-const RcDownload = require('react-component-download')
+const RfDownload = require('react-4-download')
 ```
 
 ## Usage
 
 ```javascript
-import RcDownload from 'react-component-download'
+import RfDownload from 'react-4-download'
 
 function Example() {
   return (
-    <RcDownload
-      url="https://leftstick.github.io/react-component-download/public/example.txt"
+    <RfDownload
+      url="https://leftstick.github.io/react-4-download/public/example.txt"
       responseType="blob"
       fileName="test.txt"
       fileMIMEType="text/plain"
     >
       <button>try me</button>
-    </RcDownload>
+    </RfDownload>
   )
 }
 ```
 
 ## LICENSE
 
-[MIT License](https://raw.githubusercontent.com/leftstick/react-component-download/master/LICENSE)
+[MIT License](https://raw.githubusercontent.com/leftstick/react-4-download/master/LICENSE)
 
-[npm-url]: https://npmjs.org/package/react-component-download
-[npm-image]: https://badge.fury.io/js/react-component-download.png
-[david-url]: https://david-dm.org/leftstick/react-component-download.png
-[dt-url]: https://img.shields.io/npm/dt/react-component-download.svg
-[license-url]: https://img.shields.io/npm/l/react-component-download.svg
+[npm-url]: https://npmjs.org/package/react-4-download
+[npm-image]: https://badge.fury.io/js/react-4-download.png
+[david-url]: https://david-dm.org/leftstick/react-4-download.png
+[dt-url]: https://img.shields.io/npm/dt/react-4-download.svg
+[license-url]: https://img.shields.io/npm/l/react-4-download.svg

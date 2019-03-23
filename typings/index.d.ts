@@ -11,9 +11,9 @@ interface IPropsType {
   fileName: string
   fileMIMEType: string
 }
-declare class RcDownload extends React.Component<IPropsType> {
+declare class RfDownload extends React.Component<IPropsType> {
   _fireOriginalClick: (e: MouseEvent) => void
   _onClick: (e: MouseEvent) => void
   render(): React.FunctionComponentElement<any>
 }
-export default RcDownload
+export default RfDownload
