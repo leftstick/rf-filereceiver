@@ -1,9 +1,9 @@
 {
-  "vendors.js": "/react-4-download/static/js/vendors.44ed9558.js",
-  "1-home.js": "/react-4-download/static/js/1-home.e23190b6.js",
-  "2-contribute.js": "/react-4-download/static/js/2-contribute.1ae3ab14.js",
-  "app.js": "/react-4-download/static/js/app.e3b3862e.js",
-  "runtime~app.js": "/react-4-download/static/js/runtime~app.5addd39bd3dbedcb6535.js",
-  "static/js/5.fa2d262a.js": "/react-4-download/static/js/5.fa2d262a.js",
-  "index.html": "/react-4-download/index.html"
+  "vendors.js": "/rf-filereceiver/static/js/vendors.e7e0a80d.js",
+  "1-home.js": "/rf-filereceiver/static/js/1-home.3390d6b3.js",
+  "2-contribute.js": "/rf-filereceiver/static/js/2-contribute.1ae3ab14.js",
+  "app.js": "/rf-filereceiver/static/js/app.e6d84890.js",
+  "runtime~app.js": "/rf-filereceiver/static/js/runtime~app.e1b3d852b1d80833895a.js",
+  "static/js/5.fa2d262a.js": "/rf-filereceiver/static/js/5.fa2d262a.js",
+  "index.html": "/rf-filereceiver/index.html"
 }
