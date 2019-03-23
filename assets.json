@@ -1,9 +1,9 @@
 {
-  "vendors.js": "/react-file-download/static/js/vendors.dcb210e1.js",
-  "1-home.js": "/react-file-download/static/js/1-home.04b9d7d9.js",
-  "2-contribute.js": "/react-file-download/static/js/2-contribute.1ae3ab14.js",
-  "app.js": "/react-file-download/static/js/app.922774e8.js",
-  "runtime~app.js": "/react-file-download/static/js/runtime~app.15a462f99734403854ca.js",
-  "static/js/5.fa2d262a.js": "/react-file-download/static/js/5.fa2d262a.js",
-  "index.html": "/react-file-download/index.html"
+  "vendors.js": "/react-component-download/static/js/vendors.444bdd5c.js",
+  "1-home.js": "/react-component-download/static/js/1-home.7d82dcbf.js",
+  "2-contribute.js": "/react-component-download/static/js/2-contribute.1ae3ab14.js",
+  "app.js": "/react-component-download/static/js/app.4ad2f6af.js",
+  "runtime~app.js": "/react-component-download/static/js/runtime~app.f60ccbd718ea50e6d96d.js",
+  "static/js/5.fa2d262a.js": "/react-component-download/static/js/5.fa2d262a.js",
+  "index.html": "/react-component-download/index.html"
 }
