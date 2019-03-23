@@ -1,5 +1,5 @@
 {
-  "name": "react-4-download",
+  "name": "rf-download",
   "version": "1.0.0",
   "description": "A component which interacts with user click, and download file via downloadjs",
   "scripts": {
@@ -15,7 +15,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leftstick/react-4-download.git"
+    "url": "git+https://github.com/leftstick/rf-download.git"
   },
   "files": [
     "src",
@@ -28,9 +28,9 @@
   "author": "Howard.Zuo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leftstick/react-4-download/issues"
+    "url": "https://github.com/leftstick/rf-download/issues"
   },
-  "homepage": "https://github.com/leftstick/react-4-download#readme",
+  "homepage": "https://github.com/leftstick/rf-download#readme",
   "devDependencies": {
     "@types/downloadjs": "^1.4.1",
     "@types/react": "^16.8.8",
