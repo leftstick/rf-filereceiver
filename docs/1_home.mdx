@@ -4,9 +4,9 @@ route: /
 ---
 
 import { Playground, PropsTable } from 'docz'
-import ReactFileDownload from '../src/'
+import RcDownload from '../src/'
 
-## Why react-file-download
+## Why react-component-download
 
 You might have requirement to download something programmatically.
 
@@ -17,28 +17,28 @@ You might have requirement to download something programmatically.
 ### yarn
 
 ```bash
-yarn add react-file-download
+yarn add react-component-download
 ```
 
 ### npm
 
 ```bash
-npm install react-file-download
+npm install react-component-download
 ```
 
 ## Usage
 
 <Playground>
-  <ReactFileDownload
-    url="https://leftstick.github.io/react-file-download/public/example.txt"
+  <RcDownload
+    url="https://leftstick.github.io/react-component-download/public/example.txt"
     responseType="blob"
     fileName="test.txt"
     fileMIMEType="text/plain"
   >
     <button>Try here</button>
-  </ReactFileDownload>
+  </RcDownload>
 </Playground>
 
 ## Props
 
-<PropsTable of={ReactFileDownload} />
+<PropsTable of={RcDownload} />

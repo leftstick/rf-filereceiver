@@ -1,4 +1,4 @@
-# react-file-download
+# react-component-download
 
 [![NPM version][npm-image]][npm-url]
 ![][david-url]
@@ -12,13 +12,13 @@ A component which interacts with user click, and download file via downloadjs
 ### yarn
 
 ```bash
-yarn add react-file-download
+yarn add react-component-download
 ```
 
 ### npm
 
 ```bash
-npm install --save react-file-download
+npm install --save react-component-download
 ```
 
 ## Import
@@ -26,40 +26,40 @@ npm install --save react-file-download
 ### ES2015
 
 ```javascript
-import ReactFileDownload from 'react-file-download'
+import RcDownload from 'react-component-download'
 ```
 
 ### CommonJS
 
 ```javascript
-const ReactFileDownload = require('react-file-download')
+const RcDownload = require('react-component-download')
 ```
 
 ## Usage
 
 ```javascript
-import ReactFileDownload from 'react-file-download'
+import RcDownload from 'react-component-download'
 
 function Example() {
   return (
-    <ReactFileDownload
-      url="https://leftstick.github.io/react-file-download/public/example.txt"
+    <RcDownload
+      url="https://leftstick.github.io/react-component-download/public/example.txt"
       responseType="blob"
       fileName="test.txt"
       fileMIMEType="text/plain"
     >
       <button>try me</button>
-    </ReactFileDownload>
+    </RcDownload>
   )
 }
 ```
 
 ## LICENSE
 
-[MIT License](https://raw.githubusercontent.com/leftstick/react-file-download/master/LICENSE)
+[MIT License](https://raw.githubusercontent.com/leftstick/react-component-download/master/LICENSE)
 
-[npm-url]: https://npmjs.org/package/react-file-download
-[npm-image]: https://badge.fury.io/js/react-file-download.png
-[david-url]: https://david-dm.org/leftstick/react-file-download.png
-[dt-url]: https://img.shields.io/npm/dt/react-file-download.svg
-[license-url]: https://img.shields.io/npm/l/react-file-download.svg
+[npm-url]: https://npmjs.org/package/react-component-download
+[npm-image]: https://badge.fury.io/js/react-component-download.png
+[david-url]: https://david-dm.org/leftstick/react-component-download.png
+[dt-url]: https://img.shields.io/npm/dt/react-component-download.svg
+[license-url]: https://img.shields.io/npm/l/react-component-download.svg
