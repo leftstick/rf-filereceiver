@@ -1,4 +1,4 @@
-import axios from 'axios'
+import { ajax } from './helper/xhr'
 import PropTypes from 'prop-types'
 import React from 'react'
 import download from 'downloadjs'
@@ -7,14 +7,12 @@ class RfReceiver extends React.Component {
   static propTypes = {
     children: PropTypes.any,
     url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    responseType: PropTypes.string,
     headers: PropTypes.object,
     fileName: PropTypes.string,
     fileMIMEType: PropTypes.string
   }
 
   static defaultProps = {
-    responseType: 'blob',
     headers: {},
     fileMIMEType: 'application/octet-stream'
   }
@@ -28,18 +26,19 @@ class RfReceiver extends React.Component {
   }
 
   _onClick = e => {
-    const { url, fileMIMEType } = this.props
+    const { url, fileMIMEType, fileName, headers } = this.props
     if (e && e.preventDefault) {
       e.preventDefault()
     }
     this._fireOriginalClick(e)
 
-    axios({
+    ajax({
       url: isString(url) ? url : url(),
       method: 'GET',
-      responseType: 'blob'
+      responseType: 'blob',
+      headers: headers || {}
     }).then(response => {
-      download(response.data || response, getFileName(url), fileMIMEType)
+      download(response, getFileName(fileName, url), fileMIMEType)
     })
   }
 
@@ -55,7 +54,10 @@ class RfReceiver extends React.Component {
 
 export default RfReceiver
 
-function getFileName(url) {
+function getFileName(fileName, url) {
+  if (fileName) {
+    return fileName
+  }
   if (!url) {
     return ''
   }
@@ -64,7 +66,7 @@ function getFileName(url) {
   if (!lastPiece) {
     return ''
   }
-  return lastPiece.split('?')[0] || ''
+  return lastPiece.split('?')[0] || 'downloaded'
 }
 
 function isString(url) {

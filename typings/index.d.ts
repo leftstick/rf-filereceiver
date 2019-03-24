@@ -4,7 +4,6 @@ import React from 'react'
 interface IPropsType {
   children: JSX.Element
   url: string | (() => string)
-  responseType?: string
   headers: {
     [key: string]: string
   }

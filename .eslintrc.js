@@ -1,24 +1,9 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-    mocha: true
-  },
-  extends: 'airbnb-base',
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module'
-  },
+  extends: 'react-app',
   rules: {
-    'import/prefer-default-export': 'off',
-    semi: 'off',
-    'comma-dangle': ['error', 'never'],
-    'arrow-parens': ['error', 'as-needed'],
-    'no-plusplus': 'off'
+    'no-sequences': [0],
+    'no-mixed-operators': [0],
+    'react/react-in-jsx-scope': [0],
+    'no-useless-escape': [0]
   }
 }

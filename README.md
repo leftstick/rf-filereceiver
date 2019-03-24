@@ -5,7 +5,7 @@
 ![][dt-url]
 ![][license-url]
 
-A component which interacts with user click, and download file via downloadjs
+A component which interacts with user click, and download file via [downloadjs](https://github.com/rndme/download)
 
 ## Install
 
@@ -44,7 +44,6 @@ function Example() {
   return (
     <RfReceiver
       url="https://leftstick.github.io/rf-filereceiver/public/example.txt"
-      responseType="blob"
       fileName="test.txt"
       fileMIMEType="text/plain"
     >
