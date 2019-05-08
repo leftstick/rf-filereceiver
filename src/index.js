@@ -4,6 +4,19 @@ import React from 'react'
 import download from 'downloadjs'
 
 class RfReceiver extends React.Component {
+  static propTypes = {
+    children: PropTypes.any,
+    url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    headers: PropTypes.object,
+    fileName: PropTypes.string,
+    fileMIMEType: PropTypes.string
+  }
+
+  static defaultProps = {
+    headers: {},
+    fileMIMEType: 'application/octet-stream'
+  }
+
   _fireOriginalClick = e => {
     const { children } = this.props
     const childCallback = children.props.onClick
@@ -37,19 +50,6 @@ class RfReceiver extends React.Component {
     })
     return newChild
   }
-}
-
-RfReceiver.propTypes = {
-  children: PropTypes.any,
-  url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  headers: PropTypes.object,
-  fileName: PropTypes.string,
-  fileMIMEType: PropTypes.string
-}
-
-RfReceiver.defaultProps = {
-  headers: {},
-  fileMIMEType: 'application/octet-stream'
 }
 
 export default RfReceiver

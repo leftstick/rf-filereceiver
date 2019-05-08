@@ -4,7 +4,7 @@
   "description": "A component which interacts with user click, and download file via downloadjs",
   "scripts": {
     "start": "umi-lib doc dev",
-    "doc": "umi-lib doc build && cpx docs/404.html .docz/dist/ && umi-lib doc deploy",
+    "doc": "umi-lib doc build && cpx ./404.html .docz/dist/ && umi-lib doc deploy",
     "build": "umi-lib build",
     "prepare": "npm run build"
   },
