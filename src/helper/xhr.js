@@ -18,7 +18,7 @@ export function ajax(options) {
   return new Promise((resolve, reject) => {
     let resolved = false
 
-    const { method, url, async, headers, responseType, timeout } = opts
+    const { method, url, async, headers, responseType, timeout, onProgress } = opts
 
     xhr.open(method, url, !!async)
 
@@ -58,6 +58,15 @@ export function ajax(options) {
         }
       }
     }
+    xhr.onprogress = function(e) {
+      const { loaded, total } = e
+      let complete = ((loaded / total) * 100) | 0
+      onProgress({
+        loaded,
+        total,
+        complete
+      })
+    }
 
     xhr.onerror = () => {
       resolved = true
@@ -80,7 +89,7 @@ export function ajax(options) {
  * @param {Options} opts
  */
 function getOptions(opts) {
-  const { method, url, responseType, headers } = opts || {}
+  const { method, url, responseType, headers, onProgress } = opts || {}
   return {
     method: method || 'GET',
     url,
@@ -90,7 +99,8 @@ function getOptions(opts) {
     headers: {
       'X-Requested-With': 'XMLHttpRequest',
       ...(headers || {})
-    }
+    },
+    onProgress: onProgress
   }
 }
 
