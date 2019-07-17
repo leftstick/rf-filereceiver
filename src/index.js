@@ -9,7 +9,8 @@ class RfReceiver extends React.Component {
     url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     headers: PropTypes.object,
     fileName: PropTypes.string,
-    fileMIMEType: PropTypes.string
+    fileMIMEType: PropTypes.string,
+    onChange: PropTypes.func
   }
 
   static defaultProps = {
@@ -26,20 +27,25 @@ class RfReceiver extends React.Component {
   }
 
   _onClick = e => {
-    const { url, fileMIMEType, fileName, headers } = this.props
+    const { url, fileMIMEType, fileName, headers, onChange } = this.props
     if (e && e.preventDefault) {
       e.preventDefault()
     }
     this._fireOriginalClick(e)
-
+    onChange(true)
     ajax({
       url: isString(url) ? url : url(),
       method: 'GET',
       responseType: 'blob',
       headers: headers || {}
-    }).then(response => {
-      download(response, getFileName(fileName, url), fileMIMEType)
     })
+      .then(response => {
+        download(response, getFileName(fileName, url), fileMIMEType)
+        onChange(false)
+      })
+      .catch(err => {
+        onChange(false)
+      })
   }
 
   render() {
