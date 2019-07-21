@@ -39,18 +39,19 @@ class RfReceiver extends React.Component {
       responseType: 'blob',
       headers: headers || {},
       onProgress: event => {
-        onProgress(event)
+        onProgress && onProgress(event)
       }
     })
       .then(response => {
         download(response, getFileName(fileName, url), fileMIMEType)
       })
       .catch(err => {
-        onProgress({
-          loaded: 0,
-          total: 0,
-          complete: 0
-        })
+        onProgress &&
+          onProgress({
+            loaded: 0,
+            total: 0,
+            complete: 0
+          })
       })
   }
 
