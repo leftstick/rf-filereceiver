@@ -1,6 +1,6 @@
 {
   "name": "rf-filereceiver",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A component which interacts with user click, and download file via downloadjs",
   "scripts": {
     "start": "father doc dev",
@@ -33,21 +33,22 @@
   "homepage": "https://github.com/leftstick/rf-filereceiver#readme",
   "devDependencies": {
     "@types/downloadjs": "^1.4.1",
-    "@types/react": "^16.8.19",
-    "babel-eslint": "^10.0.1",
+    "@types/react": "^16.8.23",
+    "acorn": "^6.2.1",
+    "babel-eslint": "^10.0.2",
     "cpx": "^1.5.0",
     "docz-plugin-splash": "^1.0.1",
     "downloadjs": "^1.4.7",
     "eslint": "^5.16.0",
-    "eslint-config-react-app": "^4.0.1",
-    "eslint-plugin-flowtype": "^3.9.1",
+    "eslint-config-react-app": "4.0.1",
+    "eslint-plugin-flowtype": "^2.50.3",
     "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
-    "father": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "father": "^2.13.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
     "downloadjs": ">=1",
