@@ -7,6 +7,7 @@ class RfReceiver extends React.Component {
   static propTypes = {
     children: PropTypes.any,
     url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    method: PropTypes.string,
     headers: PropTypes.object,
     fileName: PropTypes.string,
     fileMIMEType: PropTypes.string,
@@ -27,7 +28,7 @@ class RfReceiver extends React.Component {
   }
 
   _onClick = e => {
-    const { url, fileMIMEType, fileName, headers, onProgress } = this.props
+    const { url, method, fileMIMEType, fileName, headers, onProgress } = this.props
     if (e && e.preventDefault) {
       e.preventDefault()
     }
@@ -35,7 +36,7 @@ class RfReceiver extends React.Component {
 
     ajax({
       url: isString(url) ? url : url(),
-      method: 'GET',
+      method: isMethod(method) || 'GET',
       responseType: 'blob',
       headers: headers || {},
       onProgress: event => {
@@ -84,4 +85,15 @@ function getFileName(fileName, url) {
 
 function isString(url) {
   return Object.prototype.toString.call(url) === '[object String]'
+}
+
+function isMethod(method) {
+  const methods = ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'TRACE', 'OPTIONS', 'PATCH']
+  if (!methods.includes(method)) {
+    throw new TypeError(
+      "The value of rf-filereceiver's method accepts: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH"
+    )
+  }
+
+  return method
 }
