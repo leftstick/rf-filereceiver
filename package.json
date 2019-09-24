@@ -4,7 +4,7 @@
   "description": "A component which interacts with user click, and download file via downloadjs",
   "scripts": {
     "start": "father doc dev",
-    "doc": "father doc build && cpx ./404.html .docz/dist/ && father doc deploy",
+    "doc": "father doc build && father doc deploy",
     "build": "father build",
     "prepare": "npm run build"
   },
@@ -31,24 +31,18 @@
     "url": "https://github.com/leftstick/rf-filereceiver/issues"
   },
   "homepage": "https://github.com/leftstick/rf-filereceiver#readme",
+  "resolutions": {
+    "docz/**/webpack": "4.28.4"
+  },
   "devDependencies": {
     "@types/downloadjs": "^1.4.1",
-    "@types/react": "^16.8.23",
-    "acorn": "^6.2.1",
-    "babel-eslint": "^10.0.2",
-    "cpx": "^1.5.0",
+    "@types/react": "^16.9.2",
     "docz-plugin-splash": "^1.0.1",
     "downloadjs": "^1.4.7",
-    "eslint": "^5.16.0",
-    "eslint-config-react-app": "4.0.1",
-    "eslint-plugin-flowtype": "^2.50.3",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2",
-    "father": "^2.13.6",
+    "father": "^2.20.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "typescript": "^3.5.3"
+    "react": "^16.9.0",
+    "typescript": "^3.6.3"
   },
   "peerDependencies": {
     "downloadjs": ">=1",
