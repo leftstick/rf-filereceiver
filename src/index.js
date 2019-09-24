@@ -36,7 +36,7 @@ class RfReceiver extends React.Component {
 
     ajax({
       url: isString(url) ? url : url(),
-      method: isMethod(method) || 'GET',
+      method: methodValidator(method) || 'GET',
       responseType: 'blob',
       headers: headers || {},
       onProgress: event => {
@@ -87,9 +87,13 @@ function isString(url) {
   return Object.prototype.toString.call(url) === '[object String]'
 }
 
-function isMethod(method) {
+function methodValidator(method) {
+  if (method === null || method === undefined) {
+    return method
+  }
+
   const methods = ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'TRACE', 'OPTIONS', 'PATCH']
-  if (!methods.includes(method)) {
+  if (!isString(method) || !methods.includes(method.toUpperCase())) {
     throw new TypeError(
       "The value of rf-filereceiver's method accepts: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH"
     )
