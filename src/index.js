@@ -8,6 +8,7 @@ class RfReceiver extends React.Component {
     children: PropTypes.any,
     url: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     method: PropTypes.string,
+    body: PropTypes.object,
     headers: PropTypes.object,
     fileName: PropTypes.string,
     fileMIMEType: PropTypes.string,
@@ -28,7 +29,7 @@ class RfReceiver extends React.Component {
   }
 
   _onClick = e => {
-    const { url, method, fileMIMEType, fileName, headers, onProgress } = this.props
+    const { url, method, fileMIMEType, fileName, headers, onProgress, body } = this.props
     if (e && e.preventDefault) {
       e.preventDefault()
     }
@@ -39,6 +40,7 @@ class RfReceiver extends React.Component {
       method: methodValidator(method) || 'GET',
       responseType: 'blob',
       headers: headers || {},
+      body: body || {},
       onProgress: event => {
         onProgress && onProgress(event)
       }
