@@ -53,6 +53,22 @@ function Example() {
 }
 ```
 
+### Params
+
+`url`: Type string/() => string
+
+`method`: Default 'GET', verification value has 'GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'TRACE', 'OPTIONS', 'PATCH', type string
+
+`body`: If method is 'GET', then body is null. Other method used, Default {}. type object {[key: string]: any}
+
+`headers`: Default {}, type object {[key: string]: string}
+
+`fileName`: Default url last name / downloaded, type string
+
+`fileMIMEType`: Default 'application/octet-stream', type string
+
+`onProgress`: type (event: { loaded: number, total: number, complete: number }) => void
+
 ## LICENSE
 
 [MIT License](https://raw.githubusercontent.com/leftstick/rf-filereceiver/master/LICENSE)

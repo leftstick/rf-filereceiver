@@ -18,7 +18,11 @@ export function ajax(options) {
   return new Promise((resolve, reject) => {
     let resolved = false
 
-    const { method, url, async, headers, responseType, timeout, onProgress } = opts
+    const { method, url, async, headers, responseType, timeout, onProgress, body } = opts
+    let data = JSON.stringify(body)
+    if (data === 'null' || data === 'undefined') {
+      data = null
+    }
 
     xhr.open(method, url, !!async)
 
@@ -58,6 +62,7 @@ export function ajax(options) {
         }
       }
     }
+
     xhr.onprogress = function(e) {
       const { loaded, total } = e
       let complete = ((loaded / total) * 100) | 0
@@ -80,7 +85,7 @@ export function ajax(options) {
       reject(xhr)
     }
 
-    xhr.send()
+    xhr.send(data)
   })
 }
 
@@ -89,11 +94,13 @@ export function ajax(options) {
  * @param {Options} opts
  */
 function getOptions(opts) {
-  const { method, url, responseType, headers, onProgress } = opts || {}
+  const { method: medium, url, responseType, headers, onProgress, body = null } = opts || {}
+  const method = medium || 'GET'
   return {
-    method: method || 'GET',
+    method,
     url,
     async: true,
+    body: method.toUpperCase() === 'GET' ? null : body,
     timeout: 1000 * 60 * 30,
     responseType,
     headers: {

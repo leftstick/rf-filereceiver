@@ -10,6 +10,10 @@ interface ProgressEvent {
 interface IPropsType {
   children: JSX.Element
   url: string | (() => string)
+  method: string
+  body: {
+    [key: string]: any
+  }
   headers: {
     [key: string]: string
   }
