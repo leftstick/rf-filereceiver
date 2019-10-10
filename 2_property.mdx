@@ -1,0 +1,75 @@
+---
+name: Property List
+---
+
+## RfReceiver
+
+## Properties
+
+<table>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+
+<tr>
+<td>url</td>
+<td> <a href="https://en.wikipedia.org/wiki/URL">URL wiki</a> </td>
+<td>string | () => string</td>
+</tr>
+
+<br />
+
+<tr>
+<td>method</td>
+<td>Default 'GET' <br /> options: 'GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'TRACE', 'OPTIONS', 'PATCH'</td>
+<td>string</td>
+</tr>
+
+<br />
+
+<tr>
+<td>body</td>
+<td>Default narrow empty object <br /> If method is 'GET', then body is null, body is invalid. Other method used</td>
+<td>object</td>
+</tr>
+
+<br />
+
+<tr>
+<td>headers</td>
+<td>Default narrow empty object</td>
+<td>object</td>
+</tr>
+
+<br />
+
+<tr>
+<td>fileName</td>
+<td>Default url last name | 'downloaded'</td>
+<td>string</td>
+</tr>
+
+<br />
+
+<tr>
+<td>fileMIMEType</td>
+<td>Default 'application/octet-stream', <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">MIME Type List</a></td>
+<td>string</td>
+</tr>
+
+<br />
+
+<tr>
+<td>onProgress</td>
+<td>Download progress</td>
+<td>(progress) => void. <br /> progress is a narrow object, properties: loaded, total, complete, They are all number </td>
+</tr>
+
+</table>
+
+
+
+
+
