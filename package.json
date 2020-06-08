@@ -35,14 +35,14 @@
     "docz/**/webpack": "4.28.4"
   },
   "devDependencies": {
-    "@types/downloadjs": "^1.4.1",
-    "@types/react": "^16.9.2",
+    "@types/downloadjs": "^1.4.2",
+    "@types/react": "^16.9.35",
     "docz-plugin-splash": "^1.0.1",
     "downloadjs": "^1.4.7",
-    "father": "^2.20.0",
+    "father": "^2.29.3",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "typescript": "^3.6.3"
+    "react": "^16.13.1",
+    "typescript": "^3.9.5"
   },
   "peerDependencies": {
     "downloadjs": ">=1",
